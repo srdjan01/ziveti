@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+	.recurring{font-size:.75em}
+	.credit{color:"lightblue" !important;}
+</style>
+    
+<script>
+     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#putHere')
+                        .attr('src', e.target.result)
+                        .width("50%")
+                        .height("50%");
+                     
+                };
+
+                reader.readAsDataURL(input.files[0]);
+               
+            }
+     }
+    
+</script>
+    
+    
+    
+    
+        
+</head> 
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+ <ul class="w3-navbar w3-theme-d2 w3-left-align w3-large">
+	 
+	 
+  <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+    <a class="w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  </li>
+	 <li><a href="#" class="w3-padding-large w3-theme-d4"><i class="fa fa-home fa-2x w3-margin-right"></i><span style="font-size:1.25em">Z-BillPay</span></a></li>
+  <li class="w3-hide-small w3-dropdown-hover">
+    <a href="#" class="w3-padding-large w3-hover-blue-grey" title="Messages"><i class="fa fa-envelope fa-2x"></i><span class="w3-badge w3-right w3-small w3-green">3</span></a>     
+    <div class="w3-dropdown-content w3-blue-grey w3-card-4">
+      <a href="#">Martha credit posted</a>
+      <a href="#">SRP charge posted</a>
+      <a href="#">Message: Where is my credit?</a>
+    </div>
+  </li>
+
+
+	 	<li class="w3-right"><a href="#" class="w3-padding-large w3-hover-blue-grey" title="My Account">
+			<i class="fa fa fa-user-circle fa-2x fa-fw"></i></a></li>
+	 
+	 	 <li class="w3-right"><a href=# class="w3-padding-large w3-hover-blue-grey" title="Sign Out">
+			 <i class="fa fa-sign-out fa-2x"></i></a></li>
+	 
+ </ul>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:51px">
+  <ul class="w3-navbar w3-left-align w3-large w3-theme">
+    <li><a class="w3-padding-large" href="#">Link 1</a></li>
+    <li><a class="w3-padding-large" href="#">Link 2</a></li>
+    <li><a class="w3-padding-large" href="#">Link 3</a></li>
+    <li><a class="w3-padding-large" href="#">My Profile</a></li>
+  </ul>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card-2 w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">Hello, Srdjan</h4>
+         <p class="w3-center">
+			 <i class="fa fa fa-user-circle fa-5x fa-fw"></i>
+			 <!--img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"-->
+			</p>
+         <hr>
+         <p><i class="fa fa-money fa-fw w3-margin-right w3-text-theme"></i> Total Due: $330.00</p>
+         <p><i class="fa fa-info-circle fa-fw w3-margin-right w3-text-theme"></i> Due Now: $218.00</p>
+         <p><i class="fa fa-exclamation-triangle fa-fw w3-margin-right w3-text-theme" style="color:red !important"></i> Total Overdue: $0.00</p>
+        </div>
+      </div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="w3-card-2 w3-round">
+        <div class="w3-accordion w3-white">
+          <button onclick="myFunction('Demo1')" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-usd fa-fw w3-margin-right"></i>Credits</button>
+          <div id="Demo1" class="w3-accordion-content w3-container">
+			  <p><a href=#><i class="fa fa-plus-square-o fa-fw w3-margin-right"></i>Post A Credit</a></p>
+			  <p><a href=#><i class="fa fa-search fa-fw w3-margin-right"></i>See Credits</a></p>
+          </div>
+          <button onclick="myFunction('Demo2')" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-refresh fa-fw w3-margin-right"></i>Recurring</button>
+          <div id="Demo2" class="w3-accordion-content w3-container">
+			  <p><a href=#><i class="fa fa-plus-square-o fa-fw w3-margin-right"></i>Post A Recurring Credit</a></p>
+			  <p><a href=#><i class="fa fa-search fa-fw w3-margin-right"></i>See Recurring</a></p>
+          </div>
+          <button onclick="myFunction('Demo3')" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-bar-chart fa-fw w3-margin-right"></i>Spend Analyzer</button>
+          <div id="Demo3" class="w3-accordion-content w3-container">
+         		<p><a href=#><i class="fa fa-calendar fa-fw w3-margin-right"></i>Past 30 Days</a></p>
+			  <p><a href=#><i class="fa fa-sliders fa-fw w3-margin-right"></i>Custom View</a></p>
+          </div>
+        </div>      
+      </div>
+      <br>
+      
+      <!-- Categories --> 
+      <div class="w3-card-2 w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Recent Category Types</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-l2">Auto</span>
+			<span class="w3-tag w3-small w3-theme-l2">Credits</span>
+            <span class="w3-tag w3-small w3-theme-l2">Entertainment</span>
+            <span class="w3-tag w3-small w3-theme-l2">Health</span>
+			<span class="w3-tag w3-small w3-theme-l2">Home</span>
+            <span class="w3-tag w3-small w3-theme-l2">Payments</span>
+            <span class="w3-tag w3-small w3-theme-l2">Merchandise</span>
+            <span class="w3-tag w3-small w3-theme-l2">Miscellaneous</span>
+            <span class="w3-tag w3-small w3-theme-l2">Restaurants</span>
+            <span class="w3-tag w3-small w3-theme-l2">Services</span>
+            <span class="w3-tag w3-small w3-theme-l2">Travel</span>
+            </p>
+        </div>
+      </div>
+      <br>
+      </div>
+    
+	  
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+      <div class="w3-container w3-card-2 w3-white w3-round w3-margin-left w3-margin-right">
+        <div class="w3-container">
+            <h2>Transactions</h2>
+            <button type="button"onclick="document.getElementById('demo').innerHTML = Date()">Display Date and Time</button>
+            <p id="demo"></p>
+            
+             
+                <a href="https://www.chase.com/"><div class="w3-col" style="width:30px"><i class="w3-xxlarge fa fa-bank">Chase</i></div>
+            <div class="w3-rest"></a></div>
+            
+  
+    <table class="w3-table-all w3-margin-bottom">
+   		
+     
+        
+        
+     <!--Form -->   
+        
+        
+<form action="form.asp" method="POST" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+    <h2 class="w3-center">My Bill Pay</h2>
+       
+<div class="w3-row w3-section w3-border">
+    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-money"></i></div>
+            <div class="w3-rest">
+       <select class="w3-row w3-select" name="option">
+           
+      <option value="" disabled selected>Select Bill Type</option>
+      <option value="1">Auto</option>
+      <option value="2">Water</option>
+      <option value="3">City Of Mesa</option>
+     </select>
+           </div>
+       </div>
+       
+  
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-dollar"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="amount" type="text" placeholder="Amount">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-calendar"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" type="date" name="posted" placeholder="Due Date">
+              
+
+        
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+    </div>
+</div>
+
+       
+       <div>
+    <input type='file' onchange="readURL(this);" />
+	  <br>	
+	  <div><!--img id="putHere" src="#" alt="image" /></div-->	
+          <img id="putHere">
+          <div class="w3-col" style="width:px"><i class="w3-xxlarge fa fa-image"></i></div>  
+          	
+</div>	
+      
+      <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-btn w3-green w3-btn-block w3-section" title="Accept">Post<i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-btn w3-red w3-btn-block w3-section" title="Decline">Cancel<i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+    
+    
+
+
+</form>
+        
+  
+        
+  <!--form>          
+     <p><i class="fa fa-bank fa-fw w3-margin-right w3-text-theme"></i><b>Select Bill Type</b>
+  <select>
+    <option value="bill">Cox</option>
+    <option value="bill">SRP</option>
+    <option value="bill">City of Mesa</option>
+    <option value="bill">Other</option>
+ </select></p>
+      <p><i class="fa fa-dollar fa-fw w3-margin-right w3-text-theme" ></i><b>Enter Amount</b>
+      <input type="amount" name="amount" ></p>
+      <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme" ></i><b>Note</b>
+     <input type="note" name="note"></p-->
+      
+          <br><br>
+	       
+
+      
+      
+    
+
+      
+      
+  </form> 
+                
+     
+  </table>
+</div>
+         
+      </div>  
+
+      <!--<div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
+        <img src="/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">32 min</span>
+        <h4>Angie Jane</h4><br>
+        <hr class="w3-clear">
+        <p>Have you seen this?</p>
+        <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button type="button" class="w3-btn w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-btn w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> -->
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card-2 w3-round w3-white w3-center">
+        <div class="w3-container">
+			<p><strong>Upcoming Charges:</strong></p>
+          <p class="recurring">Cox: $34.15 on Feb 01</p>
+          <p class="recurring">Massage Envy: $27.50 on Feb 01</p>
+          <p><button class="w3-btn w3-btn-block w3-theme-l4">See Recurring Charges</button></p>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card-2 w3-round w3-white w3-padding-16 w3-center">
+        <h4>Spend Summary</h4>
+		  <p><i class="fa fa-pie-chart fa-5x"></i></p>
+      </div>
+      <br>
+      
+      <div class="w3-card-2 w3-round w3-white w3-padding-32 w3-center">
+        <p>"empty"</p>
+      </div>
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Sunday, January 08, 2017</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>&copy; Ziveti LLC. 2013-2016</p>
+</footer>
+</body>
+
+</html> 
